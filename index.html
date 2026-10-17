@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trovol</title>
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white text-dark">
+    <!-- 1. Top Green Bar -->
+    <header class="bg-success text-white py-2 px-3 px-lg-5 small">
+      <div
+        class="container d-flex flex-wrap justify-content-between align-items-center gap-2"
+      >
+        <div class="d-flex align-items-center gap-3">
+          <span role="button">🇬🇧 English ▾</span>
+          <a href="#signup" class="text-white text-decoration-none">Sign Up</a>
+        </div>
+        <div class="d-flex align-items-center gap-4">
+          <span>📞 Call : +1234567890</span>
+          <span>✉ demo@gmail.com</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. Hero Section with Native Bootstrap Carousel (Zero Script Needed) -->
+    <section
+      class="position-relative bg-dark text-white overflow-hidden"
+      style="min-height: 600px"
+    >
+      <!-- Transparent Navigation Bar -->
+      <nav
+        class="navbar navbar-expand-lg navbar-dark position-absolute top-0 start-0 w-100 z-3 py-3"
+      >
+        <div class="container">
+          <a class="navbar-brand fw-bold fs-3 text-white" href="#">Trovol</a>
+          <div class="collapse navbar-collapse justify-content-center">
+            <ul class="navbar-nav gap-4 small fw-semibold">
+              <li class="nav-item">
+                <a
+                  class="nav-link active border-bottom border-success border-2 pb-1 text-white"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white-50" href="#about">about</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white-50" href="#packages">Pakages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white-50" href="#clients">client</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white-50" href="#blog">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white-50" href="#contact">Contact us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-flex gap-3 text-white small">
+            <span role="button">🔍</span>
+            <span role="button">👤</span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Carousel Component -->
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active" data-bs-interval="5000">
+            <div
+              class="position-relative d-flex align-items-center justify-content-center text-center"
+              style="height: 620px"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1920&q=80"
+                alt="Venice"
+                class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-25"
+              />
+              <div class="container position-relative z-2 pt-5">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold mb-3 text-white">
+                      Now start<br />Your traveling
+                    </h1>
+                    <p class="text-white-50 small mb-4 px-md-5">
+                      when looking at its layout. The point of using Lorem Ipsum
+                      is that it has a more-or-less normal distribution of
+                      letters, as opposed towhen looking at its layout. The
+                      point of using Lorem Ipsum is that it has a more-or-less
+                      normal distribution of letters, as opposed to
+                    </p>
+                    <div class="d-flex justify-content-center gap-3">
+                      <a
+                        href="#packages"
+                        class="btn btn-success px-4 py-2 fw-semibold text-uppercase small rounded-0"
+                        >Read More</a
+                      >
+                      <a
+                        href="#contact"
+                        class="btn btn-light text-success px-4 py-2 fw-semibold text-uppercase small rounded-0"
+                        >Contact us</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item" data-bs-interval="5000">
+            <div
+              class="position-relative d-flex align-items-center justify-content-center text-center"
+              style="height: 620px"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1920&q=80"
+                alt="Paris"
+                class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-25"
+              />
+              <div class="container position-relative z-2 pt-5">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold mb-3 text-white">
+                      Explore The<br />World With Us
+                    </h1>
+                    <p class="text-white-50 small mb-4 px-md-5">
+                      when looking at its layout. The point of using Lorem Ipsum
+                      is that it has a more-or-less normal distribution of
+                      letters, as opposed towhen looking at its layout.
+                    </p>
+                    <div class="d-flex justify-content-center gap-3">
+                      <a
+                        href="#packages"
+                        class="btn btn-success px-4 py-2 fw-semibold text-uppercase small rounded-0"
+                        >Read More</a
+                      >
+                      <a
+                        href="#contact"
+                        class="btn btn-light text-success px-4 py-2 fw-semibold text-uppercase small rounded-0"
+                        >Contact us</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls using purely data attributes -->
+        <button
+          class="carousel-control-prev z-3 w-auto ms-3"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="prev"
+        >
+          <span
+            class="btn btn-outline-success text-success bg-dark bg-opacity-50 rounded-circle d-flex align-items-center justify-content-center fw-bold"
+            style="width: 44px; height: 44px; font-size: 1.25rem"
+            >‹</span
+          >
+        </button>
+        <button
+          class="carousel-control-next z-3 w-auto me-3"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="next"
+        >
+          <span
+            class="btn btn-outline-success text-success bg-dark bg-opacity-50 rounded-circle d-flex align-items-center justify-content-center fw-bold"
+            style="width: 44px; height: 44px; font-size: 1.25rem"
+            >›</span
+          >
+        </button>
+      </div>
+    </section>
+
+    <!-- 3. Overlapping Search Filter Card -->
+    <section class="container position-relative z-3" style="margin-top: -65px">
+      <div class="card shadow-lg border-0 rounded-0 p-4 p-md-5 bg-white">
+        <h5 class="text-success fw-bold mb-4">Our Packages</h5>
+        <form>
+          <div class="row g-3 align-items-end">
+            <div class="col-md-4">
+              <label class="form-label small fw-semibold text-secondary"
+                >Select Your Destination :</label
+              >
+              <select
+                class="form-select border-secondary-subtle rounded-0 small"
+              >
+                <option selected>All Destinations</option>
+                <option>Italy</option>
+                <option>United States</option>
+                <option>Thailandia</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label small fw-semibold text-secondary"
+                >Select Your Date :</label
+              >
+              <input
+                type="text"
+                class="form-control border-secondary-subtle rounded-0 small"
+                placeholder="mm-dd-yy"
+              />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label small fw-semibold text-secondary"
+                >Max Price :</label
+              >
+              <select
+                class="form-select border-secondary-subtle rounded-0 small"
+              >
+                <option selected>$1000</option>
+                <option>$2000</option>
+                <option>$5000</option>
+              </select>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <button
+              type="submit"
+              class="btn btn-success px-5 rounded-0 small fw-semibold"
+            >
+              Search
+            </button>
+          </div>
+        </form>
+
+        <!-- Sub Filters Bar -->
+        <div class="text-center mt-3">
+          <a
+            class="text-dark small text-decoration-none fw-bold"
+            href="#moreFilters"
+            >More Filters ▾</a
+          >
+        </div>
+
+        <div
+          class="row g-3 text-secondary small mt-3 pt-3 border-top justify-content-center text-start"
+        >
+          <div class="col-6 col-md-3">
+            <div class="fw-bold text-dark mb-1">Typologies :</div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" checked /> Relax
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" /> Cultural
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" /> Sport
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" /> History
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="fw-bold text-dark mb-1">Durations :</div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" checked /> 2 - 4
+              Days
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" /> 2 - 3 Days
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" /> 2 - 5 Days
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" /> 2 - 6 Days
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="fw-bold text-dark mb-1">Difficulty :</div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" checked /> High
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" /> Low
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" /> Medium
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="fw-bold text-dark mb-1">Min Age :</div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" checked /> 10
+              Years
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" /> 25 Years
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" /> 40 Years
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. World Place Packages Section -->
+    <section id="packages" class="container py-5 my-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">
+          World Place
+          <span class="border-bottom border-success border-2 pb-1"
+            >Packages</span
+          >
+        </h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm rounded-0">
+            <img
+              src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=700&q=80"
+              class="card-img-top rounded-0 object-fit-cover"
+              style="height: 220px"
+              alt="Tuscany"
+            />
+            <div class="card-body p-4">
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <div>
+                  <h5 class="fw-bold mb-0">Tuscany</h5>
+                  <span class="text-secondary small">Italy</span>
+                </div>
+                <div class="text-end">
+                  <span class="text-success small d-block">Price</span>
+                  <span class="fw-bold">$1000.0</span>
+                </div>
+              </div>
+              <p class="text-secondary small mt-3">
+                Content here, content here', making it look like readable
+                English. Many desktop publishing packagesContent here, content
+                here', making it look like readable English.
+              </p>
+              <div class="d-flex gap-2 mt-4">
+                <a href="#" class="btn btn-dark btn-sm rounded-0 px-3"
+                  >Read More</a
+                >
+                <a href="#" class="btn btn-success btn-sm rounded-0 px-3"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm rounded-0">
+            <img
+              src="https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=700&q=80"
+              class="card-img-top rounded-0 object-fit-cover"
+              style="height: 220px"
+              alt="Pisa"
+            />
+            <div class="card-body p-4">
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <div>
+                  <h5 class="fw-bold mb-0">Pais</h5>
+                  <span class="text-secondary small">Italy</span>
+                </div>
+                <div class="text-end">
+                  <span class="text-success small d-block">Price</span>
+                  <span class="fw-bold">$1000.0</span>
+                </div>
+              </div>
+              <p class="text-secondary small mt-3">
+                Content here, content here', making it look like readable
+                English. Many desktop publishing packagesContent here, content
+                here', making it look like readable English.
+              </p>
+              <div class="d-flex gap-2 mt-4">
+                <a href="#" class="btn btn-dark btn-sm rounded-0 px-3"
+                  >Read More</a
+                >
+                <a href="#" class="btn btn-success btn-sm rounded-0 px-3"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm rounded-0">
+            <img
+              src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=700&q=80"
+              class="card-img-top rounded-0 object-fit-cover"
+              style="height: 220px"
+              alt="San Francisco"
+            />
+            <div class="card-body p-4">
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <div>
+                  <h5 class="fw-bold mb-0">San Francisco</h5>
+                  <span class="text-secondary small">United States</span>
+                </div>
+                <div class="text-end">
+                  <span class="text-success small d-block">Price</span>
+                  <span class="fw-bold">$1000.0</span>
+                </div>
+              </div>
+              <p class="text-secondary small mt-3">
+                Content here, content here', making it look like readable
+                English. Many desktop publishing packagesContent here, content
+                here', making it look like readable English.
+              </p>
+              <div class="d-flex gap-2 mt-4">
+                <a href="#" class="btn btn-dark btn-sm rounded-0 px-3"
+                  >Read More</a
+                >
+                <a href="#" class="btn btn-success btn-sm rounded-0 px-3"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm rounded-0">
+            <img
+              src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=700&q=80"
+              class="card-img-top rounded-0 object-fit-cover"
+              style="height: 220px"
+              alt="Phuket"
+            />
+            <div class="card-body p-4">
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <div>
+                  <h5 class="fw-bold mb-0">Phuket</h5>
+                  <span class="text-secondary small">Thailandia</span>
+                </div>
+                <div class="text-end">
+                  <span class="text-success small d-block">Price</span>
+                  <span class="fw-bold">$1000.0</span>
+                </div>
+              </div>
+              <p class="text-secondary small mt-3">
+                Content here, content here', making it look like readable
+                English. Many desktop publishing packagesContent here, content
+                here', making it look like readable English.
+              </p>
+              <div class="d-flex gap-2 mt-4">
+                <a href="#" class="btn btn-dark btn-sm rounded-0 px-3"
+                  >Read More</a
+                >
+                <a href="#" class="btn btn-success btn-sm rounded-0 px-3"
+                  >Book Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a
+          href="#"
+          class="btn btn-success px-4 py-2 rounded-0 small fw-semibold"
+          >See More</a
+        >
+      </div>
+    </section>
+
+    <!-- 5. About Our Company Section -->
+    <section
+      id="about"
+      class="position-relative bg-dark text-white text-center py-5 overflow-hidden"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80"
+        class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-25"
+        alt="Tropical Islands"
+      />
+      <div class="container position-relative z-2 py-5">
+        <h2 class="fw-bold mb-3">
+          About
+          <span class="border-bottom border-success border-2 pb-1"
+            >Our Company</span
+          >
+        </h2>
+        <div class="row justify-content-center my-4">
+          <div class="col-lg-8">
+            <p class="small text-white-50 leading-relaxed">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially
+            </p>
+          </div>
+        </div>
+        <a
+          href="#"
+          class="btn btn-success rounded-0 px-4 py-2 small fw-semibold"
+          >Read More</a
+        >
+      </div>
+    </section>
+
+    <!-- 6. Customers Says Section with Native Bootstrap Carousel (Zero Script Needed) -->
+    <section id="clients" class="container py-5 my-4 text-center">
+      <h2 class="fw-bold mb-5">
+        Customers
+        <span class="border-bottom border-success border-2 pb-1">Says</span>
+      </h2>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div
+            id="testiCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card border-0 shadow-sm p-4 rounded-0 bg-light">
+                  <p class="small text-secondary mb-0">
+                    text of the printing and typesetting industry. Lorem Ipsum
+                    has been the industry's standard dummy text ever since the
+                    1500s, when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book.
+                  </p>
+                </div>
+                <div class="text-center mt-4">
+                  <div
+                    class="bg-success text-white mx-auto d-flex align-items-center justify-content-center"
+                    style="width: 60px; height: 60px"
+                  >
+                    <span>👤</span>
+                  </div>
+                  <h6 class="fw-bold mt-2 mb-0">Fitter Found</h6>
+                  <span class="text-success small">Industry's standard</span>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="card border-0 shadow-sm p-4 rounded-0 bg-light">
+                  <p class="small text-secondary mb-0">
+                    Many desktop publishing packages and web page editors now
+                    use Lorem Ipsum as their default model text, and a search
+                    for lorem ipsum will uncover many web sites still in their
+                    infancy.
+                  </p>
+                </div>
+                <div class="text-center mt-4">
+                  <div
+                    class="bg-success text-white mx-auto d-flex align-items-center justify-content-center"
+                    style="width: 60px; height: 60px"
+                  >
+                    <span>👤</span>
+                  </div>
+                  <h6 class="fw-bold mt-2 mb-0">John Doe</h6>
+                  <span class="text-success small">Happy Traveler</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls using purely data attributes -->
+            <div class="d-flex justify-content-center gap-3 mt-4">
+              <button
+                class="btn btn-dark rounded-0 d-flex align-items-center justify-content-center"
+                style="width: 36px; height: 36px"
+                type="button"
+                data-bs-target="#testiCarousel"
+                data-bs-slide="prev"
+              >
+                ‹
+              </button>
+              <button
+                class="btn btn-dark rounded-0 d-flex align-items-center justify-content-center"
+                style="width: 36px; height: 36px"
+                type="button"
+                data-bs-target="#testiCarousel"
+                data-bs-slide="next"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Footer Contact & Newsletter -->
+    <footer id="contact" class="bg-dark text-white pt-5 pb-3">
+      <div class="container py-4">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <h5 class="fw-bold mb-4">Contact Us</h5>
+            <form class="d-flex flex-column gap-3">
+              <input
+                type="text"
+                class="form-control bg-transparent text-white border-0 border-bottom border-secondary rounded-0 small px-0"
+                placeholder="Full Name"
+              />
+              <input
+                type="email"
+                class="form-control bg-transparent text-white border-0 border-bottom border-secondary rounded-0 small px-0"
+                placeholder="Your Email"
+              />
+              <input
+                type="tel"
+                class="form-control bg-transparent text-white border-0 border-bottom border-secondary rounded-0 small px-0"
+                placeholder="Phone Number"
+              />
+              <textarea
+                class="form-control bg-transparent text-white border-0 border-bottom border-secondary rounded-0 small px-0"
+                rows="3"
+                placeholder="Your Words"
+              ></textarea>
+              <div>
+                <button
+                  type="submit"
+                  class="btn btn-success rounded-0 px-4 py-2 small fw-semibold mt-2"
+                >
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="d-flex flex-column gap-3 mb-4">
+              <div class="d-flex align-items-center gap-3">
+                <span
+                  class="bg-success text-white p-2 d-inline-flex justify-content-center align-items-center"
+                  style="width: 36px; height: 36px"
+                  >📍</span
+                >
+                <span class="small text-secondary"
+                  >Making this the first true</span
+                >
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <span
+                  class="bg-success text-white p-2 d-inline-flex justify-content-center align-items-center"
+                  style="width: 36px; height: 36px"
+                  >📞</span
+                >
+                <span class="small text-secondary">Call : +01 1234567890</span>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <span
+                  class="bg-success text-white p-2 d-inline-flex justify-content-center align-items-center"
+                  style="width: 36px; height: 36px"
+                  >✉</span
+                >
+                <span class="small text-secondary">Email : demo@gmail.com</span>
+              </div>
+            </div>
+
+            <h6 class="fw-bold mt-4 mb-3">Follow Us</h6>
+            <div class="d-flex gap-3 text-secondary mb-4">
+              <span role="button">🌐</span>
+              <span role="button">🐦</span>
+              <span role="button">💼</span>
+              <span role="button">📷</span>
+            </div>
+
+            <h6 class="fw-bold mb-3">Newsletter</h6>
+            <form class="d-flex">
+              <input
+                type="email"
+                class="form-control bg-transparent text-white border-0 border-bottom border-secondary rounded-0 small px-0"
+                placeholder="Your Email"
+              />
+              <button
+                type="submit"
+                class="btn btn-link text-success text-decoration-none fw-bold small p-0 ms-2"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="border-top border-secondary mt-5 pt-3 text-center">
+          <p class="small text-secondary mb-0">
+            &copy; 2026 All Rights Reserved. Design by Free Html Templates
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Only the official Bootstrap bundle (no jQuery, no Owl Carousel, no custom scripts) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

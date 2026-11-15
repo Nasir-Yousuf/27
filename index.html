@@ -3,710 +3,577 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trovol</title>
+    <title>Trovol - World Place Packages</title>
 
     <!-- Bootstrap 5.3 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="./css/all.css" />
+
+    <!-- Pixel Perfect Custom Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body class="bg-white text-dark">
-    <!-- 1. Top Green Bar -->
-    <header class="bg-success text-white py-2 px-3 px-lg-5 small">
-      <div
-        class="container d-flex flex-wrap justify-content-between align-items-center gap-2"
-      >
-        <div class="d-flex align-items-center gap-3">
-          <span role="button">🇬🇧 English ▾</span>
-          <a href="#signup" class="text-white text-decoration-none">Sign Up</a>
+  <body>
+    <!-- ======================================================================
+         1. TOP HEADER BAR
+         ====================================================================== -->
+    <header class="top-header-bar">
+      <div class="top-header-container">
+        <!-- Left: Language & Sign Up -->
+        <div class="top-left-actions">
+          <div class="lang-selector">
+            <img src="./images/flag_uk.png" alt="UK Flag" class="flag-icon" />
+            <span>English</span>
+            <img src="./images/lang_arrow.png" alt="arrow" style="width: 10px; height: 6px; margin-left: 2px;" />
+          </div>
+          <a href="#signup" class="signup-link">Sign Up</a>
         </div>
-        <div class="d-flex align-items-center gap-4">
-          <span>📞 Call : +1234567890</span>
-          <span>✉ demo@gmail.com</span>
+
+        <!-- Right: Call & Demo Email -->
+        <div class="top-right-contacts">
+          <div class="top-contact-item">
+            <img src="./images/top_phone.png" alt="Call" style="width: 14px; height: 14px; object-fit: contain;" />
+            <span>Call : +1234567890</span>
+          </div>
+          <div class="top-contact-item">
+            <img src="./images/top_mail.png" alt="Email" style="width: 15px; height: 11px; object-fit: contain;" />
+            <span>demo@gmail.com</span>
+          </div>
         </div>
       </div>
     </header>
 
-    <!-- 2. Hero Section with Native Bootstrap Carousel (Zero Script Needed) -->
-    <section
-      class="position-relative bg-dark text-white overflow-hidden"
-      style="min-height: 600px"
-    >
-      <!-- Transparent Navigation Bar -->
-      <nav
-        class="navbar navbar-expand-lg navbar-dark position-absolute top-0 start-0 w-100 z-3 py-3"
-      >
-        <div class="container">
-          <a class="navbar-brand fw-bold fs-3 text-white" href="#">Trovol</a>
-          <div class="collapse navbar-collapse justify-content-center">
-            <ul class="navbar-nav gap-4 small fw-semibold">
-              <li class="nav-item">
-                <a
-                  class="nav-link active border-bottom border-success border-2 pb-1 text-white"
-                  href="#"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white-50" href="#about">about</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white-50" href="#packages">Pakages</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white-50" href="#clients">client</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white-50" href="#blog">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white-50" href="#contact">Contact us</a>
-              </li>
-            </ul>
-          </div>
-          <div class="d-flex gap-3 text-white small">
-            <span role="button">🔍</span>
-            <span role="button">👤</span>
+    <!-- ======================================================================
+         2. HERO & NAVIGATION WITH BOOTSTRAP CAROUSEL
+         ====================================================================== -->
+    <section class="hero-wrapper">
+      <div class="hero-overlay"></div>
+
+      <!-- Navigation Bar -->
+      <nav class="main-navbar">
+        <div class="nav-container">
+          <!-- Brand Logo -->
+          <a href="#" class="logo-brand">Trovol</a>
+
+          <!-- Nav Menu Links -->
+          <ul class="nav-menu-list">
+            <li><a href="#" class="nav-link-custom active">Home</a></li>
+            <li><a href="#about" class="nav-link-custom">about</a></li>
+            <li><a href="#packages" class="nav-link-custom">Pakages</a></li>
+            <li><a href="#clients" class="nav-link-custom">client</a></li>
+            <li><a href="#blog" class="nav-link-custom">Blog</a></li>
+            <li><a href="#contact" class="nav-link-custom">Contact us</a></li>
+          </ul>
+
+          <!-- Nav Icons -->
+          <div class="nav-icon-actions">
+            <span class="nav-icon-link" title="Search">
+              <img src="./images/icon_search.png" alt="Search" style="width: 18px; height: 18px; object-fit: contain;" />
+            </span>
+            <span class="nav-icon-link" title="User Profile">
+              <img src="./images/icon_user.png" alt="User" style="width: 18px; height: 18px; object-fit: contain;" />
+            </span>
           </div>
         </div>
       </nav>
 
-      <!-- Carousel Component -->
-      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- Carousel Slides -->
+      <div id="heroSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
         <div class="carousel-inner">
           <!-- Slide 1 -->
-          <div class="carousel-item active" data-bs-interval="5000">
-            <div
-              class="position-relative d-flex align-items-center justify-content-center text-center"
-              style="height: 620px"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1920&q=80"
-                alt="Venice"
-                class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-25"
-              />
-              <div class="container position-relative z-2 pt-5">
-                <div class="row justify-content-center">
-                  <div class="col-lg-8">
-                    <h1 class="display-5 fw-bold mb-3 text-white">
-                      Now start<br />Your traveling
-                    </h1>
-                    <p class="text-white-50 small mb-4 px-md-5">
-                      when looking at its layout. The point of using Lorem Ipsum
-                      is that it has a more-or-less normal distribution of
-                      letters, as opposed towhen looking at its layout. The
-                      point of using Lorem Ipsum is that it has a more-or-less
-                      normal distribution of letters, as opposed to
-                    </p>
-                    <div class="d-flex justify-content-center gap-3">
-                      <a
-                        href="#packages"
-                        class="btn btn-success px-4 py-2 fw-semibold text-uppercase small rounded-0"
-                        >Read More</a
-                      >
-                      <a
-                        href="#contact"
-                        class="btn btn-light text-success px-4 py-2 fw-semibold text-uppercase small rounded-0"
-                        >Contact us</a
-                      >
-                    </div>
-                  </div>
-                </div>
+          <div class="carousel-item active">
+            <div class="hero-content-area">
+              <h1 class="hero-title">Now start<br />Your traveling</h1>
+              <p class="hero-description">
+                when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed towhen looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+              </p>
+              <div class="hero-cta-buttons">
+                <a href="#packages" class="btn-hero-green">Read More</a>
+                <a href="#contact" class="btn-hero-white">Contact us</a>
               </div>
             </div>
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" data-bs-interval="5000">
-            <div
-              class="position-relative d-flex align-items-center justify-content-center text-center"
-              style="height: 620px"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1920&q=80"
-                alt="Paris"
-                class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-25"
-              />
-              <div class="container position-relative z-2 pt-5">
-                <div class="row justify-content-center">
-                  <div class="col-lg-8">
-                    <h1 class="display-5 fw-bold mb-3 text-white">
-                      Explore The<br />World With Us
-                    </h1>
-                    <p class="text-white-50 small mb-4 px-md-5">
-                      when looking at its layout. The point of using Lorem Ipsum
-                      is that it has a more-or-less normal distribution of
-                      letters, as opposed towhen looking at its layout.
-                    </p>
-                    <div class="d-flex justify-content-center gap-3">
-                      <a
-                        href="#packages"
-                        class="btn btn-success px-4 py-2 fw-semibold text-uppercase small rounded-0"
-                        >Read More</a
-                      >
-                      <a
-                        href="#contact"
-                        class="btn btn-light text-success px-4 py-2 fw-semibold text-uppercase small rounded-0"
-                        >Contact us</a
-                      >
-                    </div>
-                  </div>
-                </div>
+          <div class="carousel-item">
+            <div class="hero-content-area">
+              <h1 class="hero-title">Explore The<br />World With Us</h1>
+              <p class="hero-description">
+                when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed towhen looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+              </p>
+              <div class="hero-cta-buttons">
+                <a href="#packages" class="btn-hero-green">Read More</a>
+                <a href="#contact" class="btn-hero-white">Contact us</a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Controls using purely data attributes -->
-        <button
-          class="carousel-control-prev z-3 w-auto ms-3"
-          type="button"
-          data-bs-target="#heroCarousel"
-          data-bs-slide="prev"
-        >
-          <span
-            class="btn btn-outline-success text-success bg-dark bg-opacity-50 rounded-circle d-flex align-items-center justify-content-center fw-bold"
-            style="width: 44px; height: 44px; font-size: 1.25rem"
-            >‹</span
-          >
+        <!-- Carousel Navigation Arrows -->
+        <button class="hero-nav-arrow hero-arrow-left" type="button" data-bs-target="#heroSlider" data-bs-slide="prev" aria-label="Previous">
+          <img src="./images/hero_prev.png" alt="Previous" style="width: 12px; height: 22px;" />
         </button>
-        <button
-          class="carousel-control-next z-3 w-auto me-3"
-          type="button"
-          data-bs-target="#heroCarousel"
-          data-bs-slide="next"
-        >
-          <span
-            class="btn btn-outline-success text-success bg-dark bg-opacity-50 rounded-circle d-flex align-items-center justify-content-center fw-bold"
-            style="width: 44px; height: 44px; font-size: 1.25rem"
-            >›</span
-          >
+        <button class="hero-nav-arrow hero-arrow-right" type="button" data-bs-target="#heroSlider" data-bs-slide="next" aria-label="Next">
+          <img src="./images/hero_next.png" alt="Next" style="width: 12px; height: 22px;" />
         </button>
       </div>
     </section>
 
-    <!-- 3. Overlapping Search Filter Card -->
-    <section class="container position-relative z-3" style="margin-top: -65px">
-      <div class="card shadow-lg border-0 rounded-0 p-4 p-md-5 bg-white">
-        <h5 class="text-success fw-bold mb-4">Our Packages</h5>
-        <form>
-          <div class="row g-3 align-items-end">
-            <div class="col-md-4">
-              <label class="form-label small fw-semibold text-secondary"
-                >Select Your Destination :</label
-              >
-              <select
-                class="form-select border-secondary-subtle rounded-0 small"
-              >
-                <option selected>All Destinations</option>
-                <option>Italy</option>
-                <option>United States</option>
-                <option>Thailandia</option>
-              </select>
+    <!-- ======================================================================
+         3. OVERLAPPING SEARCH FILTER CARD
+         ====================================================================== -->
+    <section class="search-card-outer">
+      <div class="search-box-card">
+        <h4 class="search-heading">Our Packages</h4>
+
+        <form action="#" method="get">
+          <div class="search-form-grid">
+            <!-- Destination -->
+            <div class="search-field-group">
+              <label class="search-label" for="destSelect">Select Your Destination :</label>
+              <div class="search-input-wrapper">
+                <select id="destSelect" class="search-input-field">
+                  <option selected>All Destinations</option>
+                  <option value="italy">Italy</option>
+                  <option value="usa">United States</option>
+                  <option value="thailand">Thailandia</option>
+                </select>
+                <img src="./images/select_arrow.png" alt="arrow" class="select-icon-arrow" />
+              </div>
             </div>
-            <div class="col-md-4">
-              <label class="form-label small fw-semibold text-secondary"
-                >Select Your Date :</label
-              >
-              <input
-                type="text"
-                class="form-control border-secondary-subtle rounded-0 small"
-                placeholder="mm-dd-yy"
-              />
+
+            <!-- Date -->
+            <div class="search-field-group">
+              <label class="search-label" for="dateInput">Select Your Date :</label>
+              <div class="search-input-wrapper">
+                <input type="text" id="dateInput" class="search-input-field" placeholder="mm-dd-yy" />
+              </div>
             </div>
-            <div class="col-md-4">
-              <label class="form-label small fw-semibold text-secondary"
-                >Max Price :</label
-              >
-              <select
-                class="form-select border-secondary-subtle rounded-0 small"
-              >
-                <option selected>$1000</option>
-                <option>$2000</option>
-                <option>$5000</option>
-              </select>
+
+            <!-- Max Price -->
+            <div class="search-field-group">
+              <label class="search-label" for="priceSelect">Max Price :</label>
+              <div class="search-input-wrapper">
+                <select id="priceSelect" class="search-input-field">
+                  <option selected>$1000</option>
+                  <option value="2000">$2000</option>
+                  <option value="3000">$3000</option>
+                  <option value="5000">$5000</option>
+                </select>
+                <img src="./images/select_arrow.png" alt="arrow" class="select-icon-arrow" />
+              </div>
             </div>
           </div>
-          <div class="text-center mt-4">
-            <button
-              type="submit"
-              class="btn btn-success px-5 rounded-0 small fw-semibold"
-            >
-              Search
-            </button>
+
+          <!-- Submit Button -->
+          <div class="search-btn-container">
+            <button type="submit" class="btn-search-submit">Search</button>
           </div>
         </form>
 
-        <!-- Sub Filters Bar -->
-        <div class="text-center mt-3">
-          <a
-            class="text-dark small text-decoration-none fw-bold"
-            href="#moreFilters"
-            >More Filters ▾</a
-          >
+        <!-- More Filters Toggle Button -->
+        <div class="more-filters-toggle">
+          <button class="more-filters-btn" type="button" data-bs-toggle="collapse" data-bs-target="#moreFiltersCollapse" aria-expanded="true" aria-controls="moreFiltersCollapse">
+            <img src="./images/icon_more_filter.png" alt="filter" style="width: 14px; height: 14px; object-fit: contain;" />
+            <span>More Filters</span>
+          </button>
         </div>
 
-        <div
-          class="row g-3 text-secondary small mt-3 pt-3 border-top justify-content-center text-start"
-        >
-          <div class="col-6 col-md-3">
-            <div class="fw-bold text-dark mb-1">Typologies :</div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" checked /> Relax
+        <!-- Collapsible Sub Filters -->
+        <div class="collapse show" id="moreFiltersCollapse">
+          <div class="sub-filters-container">
+            <!-- Typologies -->
+            <div class="filter-col">
+              <div class="filter-col-title">Typologies :</div>
+              <div class="filter-radio-group">
+                <label class="radio-item-label">
+                  <input type="radio" name="typology" class="custom-radio" checked />
+                  <span>Relax</span>
+                </label>
+                <label class="radio-item-label">
+                  <input type="radio" name="typology" class="custom-radio" />
+                  <span>Cultural</span>
+                </label>
+                <label class="radio-item-label">
+                  <input type="radio" name="typology" class="custom-radio" />
+                  <span>Sport</span>
+                </label>
+                <label class="radio-item-label">
+                  <input type="radio" name="typology" class="custom-radio" />
+                  <span>History</span>
+                </label>
+              </div>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" /> Cultural
+
+            <!-- Durations -->
+            <div class="filter-col">
+              <div class="filter-col-title">Durations :</div>
+              <div class="filter-radio-group">
+                <label class="radio-item-label">
+                  <input type="radio" name="duration" class="custom-radio" checked />
+                  <span>2 - 4 Days</span>
+                </label>
+                <label class="radio-item-label">
+                  <input type="radio" name="duration" class="custom-radio" />
+                  <span>2 - 3 Days</span>
+                </label>
+                <label class="radio-item-label">
+                  <input type="radio" name="duration" class="custom-radio" />
+                  <span>2 - 5 Days</span>
+                </label>
+                <label class="radio-item-label">
+                  <input type="radio" name="duration" class="custom-radio" />
+                  <span>2 - 6 Days</span>
+                </label>
+              </div>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" /> Sport
+
+            <!-- Difficulty -->
+            <div class="filter-col">
+              <div class="filter-col-title">Difficulty :</div>
+              <div class="filter-radio-group">
+                <label class="radio-item-label">
+                  <input type="radio" name="difficulty" class="custom-radio" checked />
+                  <span>High</span>
+                </label>
+                <label class="radio-item-label">
+                  <input type="radio" name="difficulty" class="custom-radio" />
+                  <span>Low</span>
+                </label>
+                <label class="radio-item-label">
+                  <input type="radio" name="difficulty" class="custom-radio" />
+                  <span>Medium</span>
+                </label>
+              </div>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" /> History
-            </div>
-          </div>
-          <div class="col-6 col-md-3">
-            <div class="fw-bold text-dark mb-1">Durations :</div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" checked /> 2 - 4
-              Days
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" /> 2 - 3 Days
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" /> 2 - 5 Days
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" /> 2 - 6 Days
-            </div>
-          </div>
-          <div class="col-6 col-md-3">
-            <div class="fw-bold text-dark mb-1">Difficulty :</div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" checked /> High
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" /> Low
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" /> Medium
-            </div>
-          </div>
-          <div class="col-6 col-md-3">
-            <div class="fw-bold text-dark mb-1">Min Age :</div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" checked /> 10
-              Years
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" /> 25 Years
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" /> 40 Years
+
+            <!-- Min Age -->
+            <div class="filter-col">
+              <div class="filter-col-title">Min Age :</div>
+              <div class="filter-radio-group">
+                <label class="radio-item-label">
+                  <input type="radio" name="min_age" class="custom-radio" checked />
+                  <span>10 Years</span>
+                </label>
+                <label class="radio-item-label">
+                  <input type="radio" name="min_age" class="custom-radio" />
+                  <span>25 Years</span>
+                </label>
+                <label class="radio-item-label">
+                  <input type="radio" name="min_age" class="custom-radio" />
+                  <span>40 Years</span>
+                </label>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. World Place Packages Section -->
-    <section id="packages" class="container py-5 my-4">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">
-          World Place
-          <span class="border-bottom border-success border-2 pb-1"
-            >Packages</span
-          >
+    <!-- ======================================================================
+         4. WORLD PLACE PACKAGES SECTION
+         ====================================================================== -->
+    <section id="packages" class="packages-section">
+      <div class="section-heading-container">
+        <h2 class="section-main-title">
+          World Place <span>Packages</span>
+          <div class="section-title-underline"></div>
         </h2>
       </div>
 
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card border-0 shadow-sm rounded-0">
-            <img
-              src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=700&q=80"
-              class="card-img-top rounded-0 object-fit-cover"
-              style="height: 220px"
-              alt="Tuscany"
-            />
-            <div class="card-body p-4">
-              <div
-                class="d-flex justify-content-between align-items-start mb-2"
-              >
-                <div>
-                  <h5 class="fw-bold mb-0">Tuscany</h5>
-                  <span class="text-secondary small">Italy</span>
-                </div>
-                <div class="text-end">
-                  <span class="text-success small d-block">Price</span>
-                  <span class="fw-bold">$1000.0</span>
-                </div>
-              </div>
-              <p class="text-secondary small mt-3">
-                Content here, content here', making it look like readable
-                English. Many desktop publishing packagesContent here, content
-                here', making it look like readable English.
-              </p>
-              <div class="d-flex gap-2 mt-4">
-                <a href="#" class="btn btn-dark btn-sm rounded-0 px-3"
-                  >Read More</a
-                >
-                <a href="#" class="btn btn-success btn-sm rounded-0 px-3"
-                  >Book Now</a
-                >
-              </div>
-            </div>
+      <div class="packages-grid">
+        <!-- Card 1: Tuscany -->
+        <div class="package-card-item">
+          <div class="package-thumb-holder">
+            <img src="./images/tuscany.png" alt="Tuscany" class="package-thumb-img" />
           </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card border-0 shadow-sm rounded-0">
-            <img
-              src="https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=700&q=80"
-              class="card-img-top rounded-0 object-fit-cover"
-              style="height: 220px"
-              alt="Pisa"
-            />
-            <div class="card-body p-4">
-              <div
-                class="d-flex justify-content-between align-items-start mb-2"
-              >
-                <div>
-                  <h5 class="fw-bold mb-0">Pais</h5>
-                  <span class="text-secondary small">Italy</span>
-                </div>
-                <div class="text-end">
-                  <span class="text-success small d-block">Price</span>
-                  <span class="fw-bold">$1000.0</span>
-                </div>
-              </div>
-              <p class="text-secondary small mt-3">
-                Content here, content here', making it look like readable
-                English. Many desktop publishing packagesContent here, content
-                here', making it look like readable English.
-              </p>
-              <div class="d-flex gap-2 mt-4">
-                <a href="#" class="btn btn-dark btn-sm rounded-0 px-3"
-                  >Read More</a
-                >
-                <a href="#" class="btn btn-success btn-sm rounded-0 px-3"
-                  >Book Now</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card border-0 shadow-sm rounded-0">
-            <img
-              src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=700&q=80"
-              class="card-img-top rounded-0 object-fit-cover"
-              style="height: 220px"
-              alt="San Francisco"
-            />
-            <div class="card-body p-4">
-              <div
-                class="d-flex justify-content-between align-items-start mb-2"
-              >
-                <div>
-                  <h5 class="fw-bold mb-0">San Francisco</h5>
-                  <span class="text-secondary small">United States</span>
-                </div>
-                <div class="text-end">
-                  <span class="text-success small d-block">Price</span>
-                  <span class="fw-bold">$1000.0</span>
-                </div>
-              </div>
-              <p class="text-secondary small mt-3">
-                Content here, content here', making it look like readable
-                English. Many desktop publishing packagesContent here, content
-                here', making it look like readable English.
-              </p>
-              <div class="d-flex gap-2 mt-4">
-                <a href="#" class="btn btn-dark btn-sm rounded-0 px-3"
-                  >Read More</a
-                >
-                <a href="#" class="btn btn-success btn-sm rounded-0 px-3"
-                  >Book Now</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card border-0 shadow-sm rounded-0">
-            <img
-              src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=700&q=80"
-              class="card-img-top rounded-0 object-fit-cover"
-              style="height: 220px"
-              alt="Phuket"
-            />
-            <div class="card-body p-4">
-              <div
-                class="d-flex justify-content-between align-items-start mb-2"
-              >
-                <div>
-                  <h5 class="fw-bold mb-0">Phuket</h5>
-                  <span class="text-secondary small">Thailandia</span>
-                </div>
-                <div class="text-end">
-                  <span class="text-success small d-block">Price</span>
-                  <span class="fw-bold">$1000.0</span>
-                </div>
-              </div>
-              <p class="text-secondary small mt-3">
-                Content here, content here', making it look like readable
-                English. Many desktop publishing packagesContent here, content
-                here', making it look like readable English.
-              </p>
-              <div class="d-flex gap-2 mt-4">
-                <a href="#" class="btn btn-dark btn-sm rounded-0 px-3"
-                  >Read More</a
-                >
-                <a href="#" class="btn btn-success btn-sm rounded-0 px-3"
-                  >Book Now</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center mt-5">
-        <a
-          href="#"
-          class="btn btn-success px-4 py-2 rounded-0 small fw-semibold"
-          >See More</a
-        >
-      </div>
-    </section>
-
-    <!-- 5. About Our Company Section -->
-    <section
-      id="about"
-      class="position-relative bg-dark text-white text-center py-5 overflow-hidden"
-    >
-      <img
-        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80"
-        class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-25"
-        alt="Tropical Islands"
-      />
-      <div class="container position-relative z-2 py-5">
-        <h2 class="fw-bold mb-3">
-          About
-          <span class="border-bottom border-success border-2 pb-1"
-            >Our Company</span
-          >
-        </h2>
-        <div class="row justify-content-center my-4">
-          <div class="col-lg-8">
-            <p class="small text-white-50 leading-relaxed">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially
-            </p>
-          </div>
-        </div>
-        <a
-          href="#"
-          class="btn btn-success rounded-0 px-4 py-2 small fw-semibold"
-          >Read More</a
-        >
-      </div>
-    </section>
-
-    <!-- 6. Customers Says Section with Native Bootstrap Carousel (Zero Script Needed) -->
-    <section id="clients" class="container py-5 my-4 text-center">
-      <h2 class="fw-bold mb-5">
-        Customers
-        <span class="border-bottom border-success border-2 pb-1">Says</span>
-      </h2>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div
-            id="testiCarousel"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="card border-0 shadow-sm p-4 rounded-0 bg-light">
-                  <p class="small text-secondary mb-0">
-                    text of the printing and typesetting industry. Lorem Ipsum
-                    has been the industry's standard dummy text ever since the
-                    1500s, when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book.
-                  </p>
-                </div>
-                <div class="text-center mt-4">
-                  <div
-                    class="bg-success text-white mx-auto d-flex align-items-center justify-content-center"
-                    style="width: 60px; height: 60px"
-                  >
-                    <span>👤</span>
-                  </div>
-                  <h6 class="fw-bold mt-2 mb-0">Fitter Found</h6>
-                  <span class="text-success small">Industry's standard</span>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <div class="card border-0 shadow-sm p-4 rounded-0 bg-light">
-                  <p class="small text-secondary mb-0">
-                    Many desktop publishing packages and web page editors now
-                    use Lorem Ipsum as their default model text, and a search
-                    for lorem ipsum will uncover many web sites still in their
-                    infancy.
-                  </p>
-                </div>
-                <div class="text-center mt-4">
-                  <div
-                    class="bg-success text-white mx-auto d-flex align-items-center justify-content-center"
-                    style="width: 60px; height: 60px"
-                  >
-                    <span>👤</span>
-                  </div>
-                  <h6 class="fw-bold mt-2 mb-0">John Doe</h6>
-                  <span class="text-success small">Happy Traveler</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Controls using purely data attributes -->
-            <div class="d-flex justify-content-center gap-3 mt-4">
-              <button
-                class="btn btn-dark rounded-0 d-flex align-items-center justify-content-center"
-                style="width: 36px; height: 36px"
-                type="button"
-                data-bs-target="#testiCarousel"
-                data-bs-slide="prev"
-              >
-                ‹
-              </button>
-              <button
-                class="btn btn-dark rounded-0 d-flex align-items-center justify-content-center"
-                style="width: 36px; height: 36px"
-                type="button"
-                data-bs-target="#testiCarousel"
-                data-bs-slide="next"
-              >
-                ›
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. Footer Contact & Newsletter -->
-    <footer id="contact" class="bg-dark text-white pt-5 pb-3">
-      <div class="container py-4">
-        <div class="row g-5">
-          <div class="col-lg-6">
-            <h5 class="fw-bold mb-4">Contact Us</h5>
-            <form class="d-flex flex-column gap-3">
-              <input
-                type="text"
-                class="form-control bg-transparent text-white border-0 border-bottom border-secondary rounded-0 small px-0"
-                placeholder="Full Name"
-              />
-              <input
-                type="email"
-                class="form-control bg-transparent text-white border-0 border-bottom border-secondary rounded-0 small px-0"
-                placeholder="Your Email"
-              />
-              <input
-                type="tel"
-                class="form-control bg-transparent text-white border-0 border-bottom border-secondary rounded-0 small px-0"
-                placeholder="Phone Number"
-              />
-              <textarea
-                class="form-control bg-transparent text-white border-0 border-bottom border-secondary rounded-0 small px-0"
-                rows="3"
-                placeholder="Your Words"
-              ></textarea>
+          <div class="package-content-body">
+            <div class="package-header-row">
               <div>
-                <button
-                  type="submit"
-                  class="btn btn-success rounded-0 px-4 py-2 small fw-semibold mt-2"
-                >
-                  Send
-                </button>
+                <h4 class="package-destination-name">Tuscany</h4>
+                <div class="package-location-pin">
+                  <img src="./images/icon_pin_small.png" alt="pin" style="width: 12px; height: 16px; object-fit: contain;" />
+                  <span>Italy</span>
+                </div>
               </div>
-            </form>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="d-flex flex-column gap-3 mb-4">
-              <div class="d-flex align-items-center gap-3">
-                <span
-                  class="bg-success text-white p-2 d-inline-flex justify-content-center align-items-center"
-                  style="width: 36px; height: 36px"
-                  >📍</span
-                >
-                <span class="small text-secondary"
-                  >Making this the first true</span
-                >
-              </div>
-              <div class="d-flex align-items-center gap-3">
-                <span
-                  class="bg-success text-white p-2 d-inline-flex justify-content-center align-items-center"
-                  style="width: 36px; height: 36px"
-                  >📞</span
-                >
-                <span class="small text-secondary">Call : +01 1234567890</span>
-              </div>
-              <div class="d-flex align-items-center gap-3">
-                <span
-                  class="bg-success text-white p-2 d-inline-flex justify-content-center align-items-center"
-                  style="width: 36px; height: 36px"
-                  >✉</span
-                >
-                <span class="small text-secondary">Email : demo@gmail.com</span>
+              <div class="package-price-wrap">
+                <div class="price-label-text">Price</div>
+                <div class="price-number-value">$1000.0</div>
               </div>
             </div>
-
-            <h6 class="fw-bold mt-4 mb-3">Follow Us</h6>
-            <div class="d-flex gap-3 text-secondary mb-4">
-              <span role="button">🌐</span>
-              <span role="button">🐦</span>
-              <span role="button">💼</span>
-              <span role="button">📷</span>
+            <p class="package-summary-text">
+              Content here, content here', making it look like readable English. Many desktop publishing packagesContent here, content here', making it look like readable English. Many desktop publishing packages and web page editors now us
+            </p>
+            <div class="package-card-actions">
+              <a href="#" class="btn-card-dark">Read More</a>
+              <a href="#" class="btn-card-green">Book Now</a>
             </div>
-
-            <h6 class="fw-bold mb-3">Newsletter</h6>
-            <form class="d-flex">
-              <input
-                type="email"
-                class="form-control bg-transparent text-white border-0 border-bottom border-secondary rounded-0 small px-0"
-                placeholder="Your Email"
-              />
-              <button
-                type="submit"
-                class="btn btn-link text-success text-decoration-none fw-bold small p-0 ms-2"
-              >
-                Subscribe
-              </button>
-            </form>
           </div>
         </div>
 
-        <div class="border-top border-secondary mt-5 pt-3 text-center">
-          <p class="small text-secondary mb-0">
-            &copy; 2026 All Rights Reserved. Design by Free Html Templates
-          </p>
+        <!-- Card 2: Pais / Pisa -->
+        <div class="package-card-item">
+          <div class="package-thumb-holder">
+            <img src="./images/pisa.png" alt="Pais" class="package-thumb-img" />
+          </div>
+          <div class="package-content-body">
+            <div class="package-header-row">
+              <div>
+                <h4 class="package-destination-name">Pais</h4>
+                <div class="package-location-pin">
+                  <img src="./images/icon_pin_small.png" alt="pin" style="width: 12px; height: 16px; object-fit: contain;" />
+                  <span>Italy</span>
+                </div>
+              </div>
+              <div class="package-price-wrap">
+                <div class="price-label-text">Price</div>
+                <div class="price-number-value">$1000.0</div>
+              </div>
+            </div>
+            <p class="package-summary-text">
+              Content here, content here', making it look like readable English. Many desktop publishing packagesContent here, content here', making it look like readable English. Many desktop publishing packages and web page editors now us
+            </p>
+            <div class="package-card-actions">
+              <a href="#" class="btn-card-dark">Read More</a>
+              <a href="#" class="btn-card-green">Book Now</a>
+            </div>
+          </div>
         </div>
+
+        <!-- Card 3: San Francisco -->
+        <div class="package-card-item">
+          <div class="package-thumb-holder">
+            <img src="./images/san_francisco.png" alt="San Francisco" class="package-thumb-img" />
+          </div>
+          <div class="package-content-body">
+            <div class="package-header-row">
+              <div>
+                <h4 class="package-destination-name">San Francisco</h4>
+                <div class="package-location-pin">
+                  <img src="./images/icon_pin_small.png" alt="pin" style="width: 12px; height: 16px; object-fit: contain;" />
+                  <span>United States</span>
+                </div>
+              </div>
+              <div class="package-price-wrap">
+                <div class="price-label-text">Price</div>
+                <div class="price-number-value">$1000.0</div>
+              </div>
+            </div>
+            <p class="package-summary-text">
+              Content here, content here', making it look like readable English. Many desktop publishing packagesContent here, content here', making it look like readable English. Many desktop publishing packages and web page editors now us
+            </p>
+            <div class="package-card-actions">
+              <a href="#" class="btn-card-dark">Read More</a>
+              <a href="#" class="btn-card-green">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Phuket -->
+        <div class="package-card-item">
+          <div class="package-thumb-holder">
+            <img src="./images/phuket.png" alt="Phuket" class="package-thumb-img" />
+          </div>
+          <div class="package-content-body">
+            <div class="package-header-row">
+              <div>
+                <h4 class="package-destination-name">Phuket</h4>
+                <div class="package-location-pin">
+                  <img src="./images/icon_pin_small.png" alt="pin" style="width: 12px; height: 16px; object-fit: contain;" />
+                  <span>Thailandia</span>
+                </div>
+              </div>
+              <div class="package-price-wrap">
+                <div class="price-label-text">Price</div>
+                <div class="price-number-value">$1000.0</div>
+              </div>
+            </div>
+            <p class="package-summary-text">
+              Content here, content here', making it look like readable English. Many desktop publishing packagesContent here, content here', making it look like readable English. Many desktop publishing packages and web page editors now us
+            </p>
+            <div class="package-card-actions">
+              <a href="#" class="btn-card-dark">Read More</a>
+              <a href="#" class="btn-card-green">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- See More Button -->
+      <div class="see-more-wrap">
+        <a href="#" class="btn-see-more">See More</a>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. ABOUT OUR COMPANY SECTION
+         ====================================================================== -->
+    <section id="about" class="about-company-section">
+      <div class="about-overlay"></div>
+      <div class="about-content-inner">
+        <h2 class="about-heading">
+          About Our Company
+          <div class="about-underline"></div>
+        </h2>
+        <p class="about-body-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentiallyLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+        </p>
+        <a href="#" class="btn-about-green">Read More</a>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. CUSTOMERS SAYS TESTIMONIAL SECTION
+         ====================================================================== -->
+    <section id="clients" class="customers-section">
+      <div class="section-heading-container">
+        <h2 class="section-main-title">
+          Customers Says
+          <div class="section-title-underline"></div>
+        </h2>
+      </div>
+
+      <div class="testimonial-wrapper">
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Testimonial 1 -->
+            <div class="carousel-item active">
+              <div class="testimonial-speech-bubble">
+                <p class="testimonial-speech-text mb-0">
+                  text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typetext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                </p>
+              </div>
+
+              <div class="testimonial-client-info">
+                <div class="client-avatar-square">
+                  <img src="./images/client_avatar.png" alt="Fitter Found" style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
+                <h5 class="client-name-title">Fitter Found</h5>
+                <span class="client-sub-role">Industry's standard</span>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="carousel-item">
+              <div class="testimonial-speech-bubble">
+                <p class="testimonial-speech-text mb-0">
+                  text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typetext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                </p>
+              </div>
+
+              <div class="testimonial-client-info">
+                <div class="client-avatar-square">
+                  <img src="./images/client_avatar.png" alt="Fitter Found" style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
+                <h5 class="client-name-title">Fitter Found</h5>
+                <span class="client-sub-role">Industry's standard</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <div class="testimonial-nav-arrows">
+            <button class="btn-testi-arrow" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" aria-label="Previous">
+              <img src="./images/client_prev.png" alt="Previous" style="width: 10px; height: 16px;" />
+            </button>
+            <button class="btn-testi-arrow" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" aria-label="Next">
+              <img src="./images/client_next.png" alt="Next" style="width: 10px; height: 16px;" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. FOOTER CONTACT & NEWSLETTER SECTION
+         ====================================================================== -->
+    <footer id="contact" class="main-footer-section">
+      <div class="footer-container">
+        <div class="footer-top-grid">
+          <!-- Left: Contact Us Form -->
+          <div class="contact-form-col">
+            <h4 class="footer-section-title">Contact Us</h4>
+            <form action="#" method="post">
+              <input type="text" class="footer-input-underlined" placeholder="Full Name" required />
+              <input type="email" class="footer-input-underlined" placeholder="Your Email" required />
+              <input type="tel" class="footer-input-underlined" placeholder="Phone Number" />
+              <textarea class="footer-input-underlined" rows="3" placeholder="Your Words"></textarea>
+              <button type="submit" class="btn-footer-send">Send</button>
+            </form>
+          </div>
+
+          <!-- Right: Location, Phone, Email & Socials & Newsletter -->
+          <div class="footer-info-col">
+            <div class="footer-contact-list">
+              <!-- Location -->
+              <div class="footer-contact-item">
+                <div class="footer-icon-square">
+                  <img src="./images/icon_pin.png" alt="Location" style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
+                <span class="footer-contact-text">Making this the first true</span>
+              </div>
+
+              <!-- Phone -->
+              <div class="footer-contact-item">
+                <div class="footer-icon-square">
+                  <img src="./images/icon_phone.png" alt="Phone" style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
+                <span class="footer-contact-text">Call : +01 1234567890</span>
+              </div>
+
+              <!-- Email -->
+              <div class="footer-contact-item">
+                <div class="footer-icon-square">
+                  <img src="./images/icon_mail.png" alt="Email" style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
+                <span class="footer-contact-text">Email : demo@gmail.com</span>
+              </div>
+            </div>
+
+            <!-- Follow Us -->
+            <div class="footer-social-wrap">
+              <h5 class="footer-subtitle-sm">Follow Us</h5>
+              <div class="footer-social-links">
+                <a href="#" class="footer-social-icon" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="footer-social-icon" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="footer-social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="footer-social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter-wrap">
+              <h5 class="footer-subtitle-sm">Newsletter</h5>
+              <form class="newsletter-form-row" action="#" method="post">
+                <input type="email" class="newsletter-input" placeholder="Your Email" required />
+                <button type="submit" class="btn-newsletter-sub">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================================================================
+           8. PAYMENT METHODS (Page 2 of PDF: bKash, Nagad, Visa & Mastercard)
+           ====================================================================== -->
+      <section class="payment-methods-strip">
+        <div class="footer-container">
+          <div class="payment-logos-row">
+            <img src="./images/bkash.png" alt="bKash" class="payment-logo-img" />
+            <img src="./images/nagad.png" alt="Nagad" class="payment-logo-img" />
+            <img src="./images/visa_mastercard.png" alt="Visa and Mastercard" class="payment-logo-img" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Copyright -->
+      <div class="footer-bottom-copy">
+        <p>© 2020 All Rights Reserved. Design by Free Html Templates</p>
       </div>
     </footer>
 
-    <!-- Only the official Bootstrap bundle (no jQuery, no Owl Carousel, no custom scripts) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5.3 Bundle JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
